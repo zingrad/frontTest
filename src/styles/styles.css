@@ -1,0 +1,83 @@
+    :root {
+        --wrapper: 1200px;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    header {
+        max-width: var(--wrapper);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            a {
+                font-size: 1.25rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    main {
+        max-width: var(--wrapper);
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .breadcrumb ol {
+        list-style: none;
+        display: flex;
+        gap: .5rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .breadcrumb li {
+        display: flex;
+        align-items: center;
+    }
+
+    .breadcrumb li a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    .breadcrumb li:not(:last-child)::after {
+        content: "\f105";
+        /* Font Awesome: ícone de seta (fa-angle-right) */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin: 0 .5rem;
+        color: #999;
+    }
+
+    .breadcrumb li[aria-current="page"] {
+        font-weight: bold;
+        color: #333;
+    }
