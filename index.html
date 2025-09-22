@@ -3,15 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADsomos E-commerce</title>
     <link rel="stylesheet" href="./src/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img src="/src/assets/logo.png" alt="ADsomos E-commerce" title="ADsomos E-commerce">
+        <img src="/src/images/logo.png" alt="ADsomos E-commerce" title="ADsomos E-commerce">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -36,11 +40,155 @@
                 </li>
             </ol>
         </nav>
+
+        <section>
+            <div class="product">
+                <div class="gallery">
+                    <div class="gallery-main">
+                        <img id="mainImage" src="/src/images/iphone.webp" alt="iPhone 15 Pro Max">
+                    </div>
+
+                    <div class="gallery-thumbs">
+                        <img src="/src/images/iphone.webp" alt="iPhone 15 Pro Max" onclick="changeImage(this)">
+                        <img src="/src/images/iphone2.webp" alt="iPhone 15 Pro Max lateral" onclick="changeImage(this)">
+                        <img src="/src/images/iphone3.webp" alt="iPhone 15 Pro Max traseira"
+                            onclick="changeImage(this)">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1>Iphone 15 Pro Max</h1>
+                    <span class="price">R$ 7.299,00</span>
+                    <p class="installments">12x de R$ 608,25 sem juros</p>
+
+
+                    <div class="color-options">
+                        <p>Cor: <span id="selectedColor">Titânio Natural</span></p>
+
+                        <div class="color-selector">
+                            <input type="radio" id="titanio" name="color" value="Titânio Natural" checked>
+                            <label for="titanio" style="--color: #b8b5ad;"></label>
+
+                            <input type="radio" id="preto" name="color" value="Preto">
+                            <label for="preto" style="--color: #111;"></label>
+
+                            <input type="radio" id="azul" name="color" value="Azul">
+                            <label for="azul" style="--color: #2a4d9c;"></label>
+
+                            <input type="radio" id="branco" name="color" value="Branco">
+                            <label for="branco" style="--color: #f1f1f1;"></label>
+                        </div>
+                    </div>
+
+                    <span class="storage">Armazenamento: 256 GB</span>
+
+                    <div class="quantity">
+                        <label for="qtd">Quantidade:</label>
+                        <input id="qtd" type="number" value="1" min="1">
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn--cart">Adicionar ao carrinho</button>
+                        <button class="btn--buy">Comprar agora</button>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="tabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="descricao">Descrição</button>
+                        <button class="tab-btn" data-tab="especificacoes">Especificações</button>
+                    </div>
+
+                    <div class="tab-content active" id="descricao">
+                        <p>
+                            O iPhone 15 Pro Max redefine a experiência móvel com seu design em titânio,
+                            tela Super Retina XDR de 6,7 polegadas e desempenho do chip A17 Bionic.
+                        </p>
+                    </div>
+
+                    <div class="tab-content" id="especificacoes">
+                        <ul>
+                            <li>Tela: 6,7 polegadas Super Retina XDR</li>
+                            <li>Processador: A17 Bionic</li>
+                            <li>Câmera Traseira: Tripla 48 MP</li>
+                            <li>Câmera Frontal: 12 MP</li>
+                            <li>Armazenamento: 256 GB, 512 GB ou 1 TB</li>
+                            <li>Conectividade: 5G</li>
+                            <li>Sistema Operacional: iOS 17</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Avaliações (127)</h3>
+                    <p>Esta é uma avaliação incrível do produto!</p>
+                </div>
+            </div>
+        </section>
+        <section class="related-products">
+            <h2>Produtos Relacionados</h2>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="/src/images/iphone.webp" alt="iPhone 15 Pro Max">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <span class="price">R$ 7.299,00</span>
+                </div>
+                <div class="product-card">
+                    <img src="/src/images/iphone2.webp" alt="iPhone 15 Pro">
+                    <h3>iPhone 15 Pro</h3>
+                    <span class="price">R$ 6.499,00</span>
+                </div>
+                <div class="product-card">
+                    <img src="/src/images/iphone2.webp" alt="iPhone 15">
+                    <h3>iPhone 15</h3>
+                    <span class="price">R$ 5.299,00</span>
+                </div>
+                <div class="product-card">
+                    <img src="/src/images/iphone.webp" alt="iPhone 15 Plus">
+                    <h3>iPhone 15 Plus</h3>
+                    <span class="price">R$ 5.999,00</span>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>
-
+        <nav>
+            <ul>
+                <li>Sobre Nós</li>
+                <li>Informações</li>
+                <li>Atendimento</li>
+                <li>Minha conta</li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 ADsomos E-commerce. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        function changeImage(el) {
+            const mainImage = document.getElementById("mainImage");
+            mainImage.src = el.src;
+            mainImage.alt = el.alt;
+        }
+        const radios = document.querySelectorAll("input[name=color]");
+        const selectedColor = document.getElementById("selectedColor");
+
+        radios.forEach(radio => {
+            radio.addEventListener("change", () => {
+                selectedColor.textContent = radio.value;
+            });
+        });
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+                tab.classList.add("active");
+                document.getElementById(tab.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
